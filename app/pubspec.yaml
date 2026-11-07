@@ -14,7 +14,8 @@ dependencies:
   provider: ^6.1.2
   fl_chart: ^0.69.0
   intl: '>=0.19.0 <0.21.0'
-  google_fonts: '>=6.2.1 <10.0.0'
+  # 9.x uses material_ui's TextTheme, which doesn't match Flutter's and won't compile here.
+  google_fonts: '>=6.2.1 <9.0.0'
   flutter_dotenv: ^5.2.1
 
 dev_dependencies:

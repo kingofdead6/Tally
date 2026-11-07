@@ -29,8 +29,10 @@ class ApiClient {
   ApiClient(this.storage) {
     final options = BaseOptions(
       baseUrl: AppConfig.apiUrl,
-      connectTimeout: const Duration(seconds: 12),
-      receiveTimeout: const Duration(seconds: 20),
+      // Generous on purpose: a sleeping Render instance can take about a minute
+      // to answer its first request.
+      connectTimeout: const Duration(seconds: 30),
+      receiveTimeout: const Duration(seconds: 75),
       headers: {'Content-Type': 'application/json'},
     );
     _dio = Dio(options);
