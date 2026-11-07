@@ -1,0 +1,28 @@
+name: tally_app
+description: Tally — track the money you get and the money you spend, in DA.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.4.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  dio: ^5.7.0
+  flutter_secure_storage: ^9.2.2
+  provider: ^6.1.2
+  fl_chart: ^0.69.0
+  intl: '>=0.19.0 <0.21.0'
+  google_fonts: '>=6.2.1 <10.0.0'
+  flutter_dotenv: ^5.2.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - .env
